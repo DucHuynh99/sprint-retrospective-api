@@ -4,6 +4,7 @@ const boardSchema = new mongoose.Schema({
     owner: String,
     name: String,
     cardCount: Number,
+    isPrivate: Boolean,
     isArchived: Boolean,
     isDeleted: Boolean,
     createdDate: Date,
