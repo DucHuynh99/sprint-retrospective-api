@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 5000;
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 
 const boardRoute = require('./routes/board-route');
@@ -18,6 +19,7 @@ db.once('open', () => console.log('Kết nối CSDL thành công!'));
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 
 app.use('/boards', boardRoute);
