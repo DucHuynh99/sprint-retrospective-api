@@ -1,0 +1,25 @@
+{
+  "name": "sprint-retrospective-api",
+  "version": "1.0.0",
+  "description": "Đồ án giữa kỳ môn Phát triển Ứng dụng Web nâng cao - 17_31",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DucHuynh99/sprint-retrospective-api.git"
+  },
+  "author": "Huỳnh Hữu Đức",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DucHuynh99/sprint-retrospective-api/issues"
+  },
+  "homepage": "https://github.com/DucHuynh99/sprint-retrospective-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  }
+}
