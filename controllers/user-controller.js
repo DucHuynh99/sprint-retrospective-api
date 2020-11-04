@@ -31,3 +31,9 @@ exports.getUserByID = async (req, res) => {
         res.status(404).send();
     }
 }
+
+exports.update = async (req, res) => {
+    const { userID, firstName, lastName } = req.body;
+    await userModel.findByIdAndUpdate(userID, { firstName: firstName, lastName: lastName });
+    res.status(200).send();
+}
