@@ -9,6 +9,7 @@ const cors = require('cors');
 
 
 const boardRoute = require('./routes/board-route');
+const userRoute = require('./routes/user-route');
 
 
 mongoose.connect(connectionString, { useNewUrlParser: true });
@@ -23,6 +24,7 @@ app.use(cors());
 
 
 app.use('/boards', boardRoute);
+app.use('/users', userRoute);
 
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
