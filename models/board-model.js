@@ -11,4 +11,4 @@ const boardSchema = new mongoose.Schema({
     modifiedDate: Date
 });
 
-module.exports = mongoose.model('boards', boardSchema, 'Boards');
+module.exports = mongoose.model('Boards', boardSchema, 'Boards');
