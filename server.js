@@ -7,12 +7,13 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const passport = require('./middleware/passport');
 
 const boardRoute = require('./routes/board-route');
 const userRoute = require('./routes/user-route');
 
 
-mongoose.connect(connectionString, { useNewUrlParser: true });
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => console.log('Kết nối CSDL thành công!'));
@@ -21,6 +22,9 @@ db.once('open', () => console.log('Kết nối CSDL thành công!'));
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
+
+// app.use(passport.initialize());
 
 
 app.use('/boards', boardRoute);
